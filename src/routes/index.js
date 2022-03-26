@@ -4,8 +4,10 @@ import React from "react";
 import * as ReactRoute from "react-router-dom";
 import Route from "./PrivateRoute";
 
-const MyDesk = React.lazy(() => import("../screens/MyDesk"));
 const Login = React.lazy(() => import("../screens/Login"));
+const Notes = React.lazy(() => import("../screens/Notes"));
+const Todo = React.lazy(() => import("../screens/Todo"));
+const Profile = React.lazy(() => import("../screens/Profile"));
 
 export default function Routes() {
   return (
@@ -13,7 +15,9 @@ export default function Routes() {
       <ReactRoute.Switch>
         <Route component={Login} exact path="/" isAuth />
 
-        <Route component={MyDesk} exact path="/my-desk" />
+        <Route component={Notes} exact path="/notes" />
+        <Route component={Todo} exact path="/todo" />
+        <Route component={Profile} exact path="/profile" />
 
         {/* <Route component={NotFound} ispublic /> */}
       </ReactRoute.Switch>

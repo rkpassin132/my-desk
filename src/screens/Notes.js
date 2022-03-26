@@ -6,7 +6,7 @@ import { DrawerHeader } from '../components/DrawerHeader';
 
 const theme = createTheme();
 
-export default function Profile() {
+export default function Notes() {
 
   return (
     <ThemeProvider theme={theme}>
@@ -14,7 +14,7 @@ export default function Profile() {
         <Header />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <DrawerHeader />
-          <h1>Profile</h1>
+          <h1>Notes</h1>
         </Box>
       </Box>
     </ThemeProvider>
